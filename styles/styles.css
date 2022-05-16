@@ -141,6 +141,10 @@ section {
           transform: translate(-50%, -50%);
 }
 
+.controls:hover {
+  left: 3%;
+}
+
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
   -webkit-transition: var(--transition);

@@ -94,6 +94,9 @@ section {
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%);
+    &:hover {
+        left: 3%;
+    }
     .active-btn {
         background-color: var(--color-secondary) !important;
         transition: var(--transition);
