@@ -2,6 +2,39 @@ const sections = document.querySelectorAll('.section')
 const sectBtns = document.querySelectorAll('.controls')
 const sectBtn = document.querySelectorAll('.control')
 const allSections = document.querySelector('.main-content')
+const form = document.getElementById('contact-form')
+const submitForm = document.getElementById('submit-form')
+const success = document.querySelector('.success-message')
+
+
+window.addEventListener('DOMContentLoaded', () => {
+const successMessage = () => {
+    form.reset()
+    success.innerHTML = "Message sent Successfuly. Thanks"
+}
+const errorMessage = () => {
+    success.innerHTML = "Oops, there was an error, please refresh and try again"
+}
+form.addEventListener('submit', (e) => { 
+    e.preventDefault()
+    const formData = new FormData(form)
+    ajax(form.method, form.action, formData, successMessage, errorMessage)
+})
+})
+function ajax(method, url, formData, successMessage, errorMessage) {
+    const xhr = new XMLHttpRequest()
+    xhr.open(method, url)
+    xhr.setRequestHeader("accept", "application/json")
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState !== XMLHttpRequest.DONE) return
+        if(xhr.status === 200) {
+            successMessage(xhr.response, xhr.responseType)
+        } else {
+            errorMessage(xhr.status, xhr.response, xhr.responseType)
+        }
+    }
+    xhr.send(formData)
+}
 
 
 // const pageTransition = () => {

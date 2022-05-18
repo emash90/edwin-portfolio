@@ -261,19 +261,21 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        <div class="success-message" style="color: green;"></div>
+                        <form action="https://formspree.io/f/myyolork" method="post" class="contact-form" id="contact-form">
                             <div class="input-control">
-                                <input type="text" placeholder="your name">
+                                <input type="text" placeholder="your name" name="name">
                             </div>
                             <div class="input-control">
-                                <input type="text" placeholder="enter your email">
+                                <input type="text" placeholder="enter your email" name="email">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="enter message..."></textarea>
+                                <textarea name="message id="" cols="15" rows="8" placeholder="enter message..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <button class="message-btn" type="submit">send</button>
+                                <button class="message-btn" type="submit" id="submit-form">send</button>
                             </div>
+                            <div class="success-message"></div>
                         </form>
                     </div>
                 </div>
