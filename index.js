@@ -22,12 +22,14 @@ function pageTransition () {
         button.addEventListener("click", function() {
             document.querySelector(".active-btn").classList.remove("active-btn");
             this.classList.add("active-btn");
-        })    
+        })  
+    
     })
     //add active class to selected section
-    allSections.addEventListener('click', (e) => {
-        const id = e.target.dataset.id
+    allSections.addEventListener('click', e => {
+        const id = e.target.id
         if(id) {
+          
             //remove active class from selected section
             sectBtns.forEach((btn) => {
                 btn.classList.remove('active')
@@ -44,3 +46,4 @@ function pageTransition () {
     })
 }
 pageTransition()
+
