@@ -52,7 +52,7 @@ function ajax(method, url, formData, successMessage, errorMessage) {
 function pageTransition () {
     
     [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
+        button.addEventListener(['click', 'scroll'], function() {
             document.querySelector(".active-btn").classList.remove("active-btn");
             this.classList.add("active-btn");
         })  
