@@ -24,13 +24,13 @@
             <div class="control control-1 active-btn" data-id="home">
                 <li><a href="#home"><i class="fa fa-home" aria-hidden="true"></i></a> </li>
             </div>
-            <div class="control control-2" data-id="about">
+            <div class="control control-2 active-btn" data-id="about">
                 <li><a href="#about"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
             </div>
-            <div class="control control-3" data-id="projects">
+            <div class="control control-3 active-btn" data-id="projects">
                 <li><a href="#projects"><i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
             </div>
-            <div class="control control-4" data-id="contact">
+            <div class="control control-4 active-btn" data-id="contact">
                 <li><a href="#contact"><i class="fa fa-address-card" aria-hidden="true"></i></a></li>
             </div>
         </ul>
@@ -47,18 +47,12 @@
             <div class="right-header">
                 <h1 class="name">
                     Hi, I am <span>Edwin Macharia</span>
-                    <br> A Full-stack Web Developer (M.E.R.N)
+                    <br> A Full-stack Web Developer </br> <br> NodeJS | Express | MongoDB | React </br>
                 </h1>
                 <p>
                     passionate about building tech based solutions to solve emerging or existence issues in the world
                 </p>
-                <div class="btn-con">
-                    <a href="https://drive.google.com/file/d/1KMCLdHyCKj3fAL_RpTv4qbP_UlmQ4oKF/view?usp=sharing"
-                        target="_blank" class="main-btn">
-                        <span class="btn-text">Download Resume</span>
-                        <span class="btn-icon"><i class="fa fa-download" aria-hidden="true"></i></span>
-                    </a>
-                </div>
+      
             </div>
         </div>
     </header>
@@ -68,80 +62,16 @@
                 <h2>About <span>Me</span></h2>
             </div>
             <div class="about-container">
-                <p>
-                    I am a Full-Stack web developer, well versed in MongoDb, Nodejs, Express and ReactJs. I enjoy
-                    learning new skills and really excited by new technologies. I am passionate about building tech
-                    based solutions aimed at address various emerging issues in the world or even existence issues and
-                    believe that every exprience is a chance to learn something
-                </p>
+                <p>Hello! I'm a passionate Full Stack Developer with expertise in a wide range of technologies and tools. I specialize in creating end-to-end web applications, handling everything from frontend to backend development and containerization and finally deploying to production utilizing cloud resources such as virtual machines and container orchestrations like docker swam and kubernetes. I'm a quick learner and a team player who is always ready to take on new challenges and work with new technologies.</p>
+                <br>
+                <p>Talk is cheap!! yes. Checkout some amazing projects I have worked on below in the portfolio section for more insight.</p>
             </div>
-            <div class="about-stats">
-                <h4 class="stat-title">my skills</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="progress-title">html</p>
-                        <div class="progress-con">
-                            <p class="progress-text">90%</p>
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="progress-title">css</p>
-                        <div class="progress-con">
-                            <p class="progress-text">85%</p>
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="progress-title">vanilla Javascript</p>
-                        <div class="progress-con">
-                            <p class="progress-text">85%</p>
-                            <div class="progress">
-                                <span class="javascript"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="progress-title">NodeJs and Express</p>
-                        <div class="progress-con">
-                            <p class="progress-text">80%</p>
-                            <div class="progress">
-                                <span class="nodejs"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="progress-title">MongoDB</p>
-                        <div class="progress-con">
-                            <p class="progress-text">80%</p>
-                            <div class="progress">
-                                <span class="mongo"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="progress-title">React-Redux</p>
-                        <div class="progress-con">
-                            <p class="progress-text">75%</p>
-                            <div class="progress">
-                                <span class="bootstrap"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="progress-title">ReactJs</p>
-                        <div class="progress-con">
-                            <p class="progress-text">75%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="btn-con">
+                <a href="https://drive.google.com/file/d/1kNJlNUfY66b1fdoG7jGK1MC4L2ACvQFm/view?usp=share_link"
+                    target="_blank" class="main-btn">
+                    <span class="btn-text">Download Resume</span>
+                    <span class="btn-icon"><i class="fa fa-download" aria-hidden="true"></i></span>
+                </a>
             </div>
         </section>
         <section class="section sect3 projects" id="projects">
@@ -149,6 +79,27 @@
                 <h2>My <span>Portfolio</span></h2>
             </div>
             <div class="portfolios">
+                <div class="portfolio-item">
+                    <div class="title">
+                        <h3>Authentication project</h3>
+                    </div>
+                    <div class="image">
+                        <img src="img/auth_login.jpeg" alt="">
+                    </div>
+                    <div class="hover-items">
+                            <h3>Project Summary</h3>
+                            <p style="padding: 15px;"> An authentication project built on a react frontend with a express server at the backend. The project utilizes a mongoDB docker image to run a mongo container as the database and a redis container for our session management on the backend. The project is multi-repo and is containerized using docker and hosted on a Linode remote server </p>
+                        <h3 style="margin-top: 5px;">Project source</h3>
+                        <div class="icons">
+                            <a href="https://github.com/emash90/auth-project" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://170.187.235.180:4000/login" target="_blank" class="icon">
+                                <i class="fa fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="portfolio-item">
                     <div class="title">
                         <h3>package delivery web app</h3>
@@ -195,7 +146,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="title">
-                        <h3>Simple Video Chat App (Zoom)</h3>
+                        <h3>Simple Video Chat App</h3>
                     </div>
                     <div class="image">
                         <img src="img/video-chat-app.jpeg" alt="">
@@ -243,7 +194,7 @@
                         <h3>Project description</h3>
                         <p>Simple m.e.r.n chat application</p>
                         <div class="icons">
-                            <a href="https://github.com/emash90/chatterboxx" target="_blank" class="icon">
+                            <a href="https://github.com/emash90/chatter_box_app" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="https://chatterbox90.netlify.app/" target="_blank" class="icon">
@@ -300,7 +251,7 @@
                             </div>
                         </div>
                         <div class="btn-con">
-                            <a href="https://drive.google.com/file/d/1KMCLdHyCKj3fAL_RpTv4qbP_UlmQ4oKF/view?usp=sharing"
+                            <a href="https://drive.google.com/file/d/1kNJlNUfY66b1fdoG7jGK1MC4L2ACvQFm/view?usp=share_link"
                                 target="_blank" class="main-btn">
                                 <span class="btn-text">Download Resume</span>
                                 <span class="btn-icon"><i class="fa fa-download" aria-hidden="true"></i></span>
