@@ -35,48 +35,53 @@ function ajax(method, url, formData, successMessage, errorMessage) {
     }
     xhr.send(formData)
 }
+//use intersection observer to add active class to nav links and scroll to section
 
-
-// const pageTransition = () => {
-//     //add active class when button is clicked
-//     for(let i = 0; i < sectBtn.length; i++) {
-//         sectBtn[i].addEventListener('click', (event) => {
-//             let currentBtn = event.target;
-//             currentBtn[0].classList = currentBtn[0].classList.re
-//             event.target += 'active-btn'
-//         })
-//     }
-// }
-// pageTransition()
-
-function pageTransition () {
-    
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener(['click', 'scroll'], function() {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-        })  
-    
-    })
-    //add active class to selected section
-    allSections.addEventListener('click', e => {
-        const id = e.target.id
-        if(id) {
-          
-            //remove active class from selected section
-            sectBtns.forEach((btn) => {
-                btn.classList.remove('active')
-            })
-            e.target.classList.add('active')
-
-            //hide other sections
-            sections.forEach((section) => {
-                section.classList.remove('active')
-            })
-            const element = document.getElementById(id)
-            element.classList.add('active')
-        }
-    })
-}
-pageTransition()
+function pageTransition() {
+    const controls = document.querySelectorAll(".control");
+    const sections = document.querySelectorAll(".section");
+  
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Get the ID of the section in view
+            const targetId = entry.target.id;
+  
+            // Remove the "active-btn" class from all buttons
+            controls.forEach((control) => {
+              control.classList.remove("active-btn");
+            });
+  
+            // Add the "active-btn" class to the button associated with the section
+            const button = document.querySelector(`.control[data-id="${targetId}"]`);
+            button.classList.add("active-btn");
+          }
+        });
+      },
+      { rootMargin: "0px", threshold: 0.5 } // Adjust as needed
+    );
+  
+    // Observe all sections
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  
+    // Add click event listeners to buttons for smooth scrolling
+    controls.forEach((button) => {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetId = button.getAttribute("data-id");
+        const targetSection = document.getElementById(targetId);
+  
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }
+  
+  pageTransition();
+  
 
